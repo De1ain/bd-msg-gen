@@ -2,15 +2,14 @@ import express from 'express';
 
 import {
     getIndex,
-    getGreeting,
-    getGreetingPerson
+    getGreeting
 } from '../controllers/greeter.js';
 
 const router = express.Router();
 
 router.get('/', getIndex);
 
-router.get('/get-greeting/:person', getGreetingPerson);
+router.get('/get-greeting/:person', getGreeting);
 
 router.get('/get-greeting', getGreeting);
 
